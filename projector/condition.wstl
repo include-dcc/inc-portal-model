@@ -27,7 +27,7 @@ def Condition(study, condition) {
         category[0].coding[0].display: "Encounter Diagnosis";
 
         code.coding[]: coding;
-        code.coding[]: HarmonizeMapped("Diagnosis Source", "condition");
+        code.coding[]: HarmonizeMapped("Condition Description", "condition");
         code.text: condition.condition_description;
 
         resourceType: "Condition";

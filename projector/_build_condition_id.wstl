@@ -2,7 +2,7 @@
 //
 // Arguments: 
 //  study - This is the full study object created by Whistler
-//  participant_id - The id assocaited with patient (this isn't likely to be an actual FHIR id)
+//  participant_id - The id associated with patient (this isn't likely to be an actual FHIR id)
 //  varname - The variable name associated with the observation (bmi, height, etc)
 //
 def BuildConditionId(study, participant_id, condition) {
