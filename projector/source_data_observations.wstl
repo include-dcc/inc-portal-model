@@ -1,0 +1,100 @@
+
+def BuildObsComponentString(study, table_name, varname, required value) {
+    code.coding: HarmonizeMapped(varname, table_name);
+    valueString: value;
+}
+
+def BuildObsComponentCategorical(study, table_name, varname, required value) {
+    code.coding: HarmonizeMapped(varname, table_name);
+    valueCodeableConcept.coding[]: HarmonizeMapped(value, varname);
+}
+
+def BuildObsComponentInteger(study, table_name, varname, required value) {
+    code.coding: HarmonizeMapped(varname, table_name);
+    if ($Type(value)="number") {
+        valueQuantity.value: $ParseInt(value);
+    } else {
+        valueString: value;
+    }
+}
+
+def BuildObsComponentQuantity(study, table_name, varname, required value) {
+    code.coding: HarmonizeMapped(varname, table_name);
+        
+    if ($Type(value)="number") {
+        valueQuantity.value: $ParseFloat(value);
+    } else {
+        valueString: value;
+    }
+}
+
+// Write each row to an observation, specialized for each of the tables
+
+def AddSourceDataObservation-participant(study, row_data) {
+    var table_name: "participant";
+    meta.tag[]: StudyMeta(study);
+    identifier[]: Key_Identifier(study, "Observation", $StrCat(study.id, ".", table_name, ".", "source-data", ".", row_data.participant_id));
+    identifier[0].use: "official";
+    status: "final";
+    resourceType: "Observation";
+    code.coding[]: BuildCoding("74468-0", "Questionnaire form definition Document", "https://loinc.org/");
+    code.coding[]: HarmonizeMapped(table_name, "DataSet");
+    code.text: $StrCat("Source data for data table, ", table_name);
+    subject: Reference_Key_Identifier(study, "Patient", row_data.participant_id);
+    component[]: BuildObsComponentCategorical(study, table_name, "Study Code", row_data.study_code);
+    component[]: BuildObsComponentString(study, table_name, "Participant ID", row_data.participant_id);
+    component[]: BuildObsComponentString(study, table_name, "External ID", row_data.external_id);
+    component[]: BuildObsComponentString(study, table_name, "Family ID", row_data.family_id);
+    component[]: BuildObsComponentCategorical(study, table_name, "Family Type", row_data.family_type);
+    component[]: BuildObsComponentString(study, table_name, "Father ID", row_data.father_id);
+    component[]: BuildObsComponentString(study, table_name, "Mother ID", row_data.mother_id);
+    component[]: BuildObsComponentString(study, table_name, "Family Relationship", row_data.family_relationship);
+    component[]: BuildObsComponentCategorical(study, table_name, "Sex", row_data.sex);
+    component[]: BuildObsComponentCategorical(study, table_name, "Race", row_data.race);
+    component[]: BuildObsComponentCategorical(study, table_name, "Ethnicity", row_data.ethnicity);
+    component[]: BuildObsComponentCategorical(study, table_name, "Down Syndrome Status", row_data.down_syndrome_status);
+    component[]: BuildObsComponentString(study, table_name, "Outcomes Vital Status", row_data.outcomes_vital_status);
+    component[]: BuildObsComponentString(study, table_name, "Age at Last Vital Status", row_data.age_at_last_vital_status);
+}
+
+def AddSourceDataObservation-condition(study, row_data) {
+    var table_name: "condition";
+    meta.tag[]: StudyMeta(study);
+    identifier[]: Key_Identifier(study, "Observation", $StrCat(study.id, ".", table_name, ".", "source-data", ".", row_data.participant_id, ".", row_data.condition_description, ".", row_data.hpo_code, ".", row_data.mondo_code, ".", row_data.maxo_code));
+    identifier[0].use: "official";
+    status: "final";
+    resourceType: "Observation";
+    code.coding[]: BuildCoding("74468-0", "Questionnaire form definition Document", "https://loinc.org/");
+    code.coding[]: HarmonizeMapped(table_name, "DataSet");
+    code.text: $StrCat("Source data for data table, ", table_name);
+    subject: Reference_Key_Identifier(study, "Patient", row_data.participant_id);
+    component[]: BuildObsComponentCategorical(study, table_name, "Study Code", row_data.study_code);
+    component[]: BuildObsComponentString(study, table_name, "Participant ID", row_data.participant_id);
+    component[]: BuildObsComponentString(study, table_name, "Condition Description", row_data.condition_description);
+    component[]: BuildObsComponentString(study, table_name, "Age at Condition Observation", row_data.age_at_condition_observation);
+    component[]: BuildObsComponentCategorical(study, table_name, "Condition Interpretation", row_data.condition_interpretation);
+    component[]: BuildObsComponentCategorical(study, table_name, "Condition Source", row_data.condition_source);
+    component[]: BuildObsComponentString(study, table_name, "HPO Label", row_data.hpo_label);
+    component[]: BuildObsComponentString(study, table_name, "HPO Code", row_data.hpo_code);
+    component[]: BuildObsComponentString(study, table_name, "MONDO Label", row_data.mondo_label);
+    component[]: BuildObsComponentString(study, table_name, "MONDO Code", row_data.mondo_code);
+    component[]: BuildObsComponentString(study, table_name, "MAXO Label", row_data.maxo_label);
+    component[]: BuildObsComponentString(study, table_name, "MAXO Code", row_data.maxo_code);
+    component[]: BuildObsComponentString(study, table_name, "Other Label", row_data.other_label);
+    component[]: BuildObsComponentString(study, table_name, "Other Code", row_data.other_code);
+}
+// Process each table separately, passing each individual row separately
+def ProcessSourceDataLevel-participant(study, row) {
+    out source_data: AddSourceDataObservation-participant(study, row);
+}        
+        
+
+def ProcessSourceDataLevel-condition(study, row) {
+    out source_data: AddSourceDataObservation-condition(study, row);
+}        
+        
+// The entry point for all Obs Raw Data production
+def BuildRawDataObs(resource) {
+   $this: ProcessSourceDataLevel-participant(resource.study, resource.participant[]);
+   $this: ProcessSourceDataLevel-condition(resource.study, resource.condition[]);
+}

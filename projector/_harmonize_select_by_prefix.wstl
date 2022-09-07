@@ -1,0 +1,10 @@
+def HarmonizeSelection(coding, prefix) {
+    if ($MatchesRegex(coding.system, $StrCat(prefix, "*"))) {
+        $this: coding;
+    }
+}
+
+def HarmonizeSelectByPrefix(study, code, system) {
+    var codings: HarmonizeMapped(code, system);
+    $this: HarmonizeSelection(codings[], study.identifier-prefix);
+}

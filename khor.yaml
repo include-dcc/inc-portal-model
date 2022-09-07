@@ -1,0 +1,45 @@
+study_id: BRI-DSR
+study_accession:  
+study_title: Benaroya Research Institute Down Syndrome Registry
+study_desc: TBD
+url: TBD
+identifier_prefix: https://includedcc.org/bri-dsr/fhir
+output_filename: khor
+id_colname: Participant ID
+whistle_src: _portal.wstl
+code_harmonization_dir: harmony
+require_official: True
+curies:
+  http://purl.obolibrary.org/obo/hp.owl: HP
+  http://purl.obolibrary.org/obo/mondo.owl: MONDO
+  http://purl.obolibrary.org/obo/maxo.owl: MAXO
+projector_lib: projector
+env:
+  local: dev
+  dev: dev
+  qa: qa-kf-inc
+  prod: prod-kf-inc
+dataset:
+  participant:
+    filename: data/tables/BRI-DSR/participant.csv
+    data_dictionary: 
+      filename: data/dd/participant-dd.csv
+      colnames:
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/data-harmony.csv
+  condition: 
+    filename: data/tables/BRI-DSR/condition.csv
+    key_columns: Participant ID,Condition Description, HPO Code,MONDO Code,MAXO Code
+    data_dictionary: 
+      filename:  data/dd/condition-dd.csv
+      colnames:
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/data-harmony.csv  
+active_tables:
+  ALL: true

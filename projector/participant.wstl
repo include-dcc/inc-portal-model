@@ -1,0 +1,41 @@
+// For basic demographics as well as tracking a participant's various resources, 
+// we'll use FHIR's Patient resource. 
+//
+// For Race and Ethnicity, we'll use their respective extensions provided by
+// HL7 as part of standard FHIR resources. Gender is strictly bound to 
+// AdministrativeGender. For this study, it should suffice. 
+
+// Description: Our Participant is basically a limited Patient record
+//
+// Arguments:
+//  study - This is the full study object created by Whistler
+//  subject - Must have a participant_id
+// 
+def Participant(study, subject) {
+    meta.tag[]: StudyMeta(study);
+    identifier[]: Key_Identifier(study, "Patient", subject.participant_id);
+    identifier[0].use: "official";
+    gender (if subject.sex ~= "."): HarmonizeAsCode(subject.sex, "Sex");
+    extension[]: RaceExtension(subject);
+    extension[]: EthnicityExtension(subject);
+    resourceType : "Patient"
+}
+
+
+
+// Description: Wrapper for generating Patient records
+//
+// Arguments:
+//  study - This is the full study object created by Whistler
+//  demo - Must have a participant_id
+// 
+def ProcessParticipant(study, demo) {
+    //out patient: VariableObservation(study, demo.participant_id, "participant", "MRAbstractionStatus", demo.mrabstractionstatus);
+    //out patient: AgeAtEnrollmentObservation(study, demo);
+    out patient: AgeAt(study, demo, "AgeAtLastVitalStatus", "participant", demo.age_at_last_vital_status);
+    out patient: Participant(study, demo);
+
+    // out observation: TraitObservation(study, demo.participant_id, "Sex", demo.sex, "participant");
+    // out observation: TraitObservation(study, demo.participant_id, "Race", demo.race, "participant");
+    // out observation: TraitObservation(study, demo.participant_id, "Ethnicity", demo.ethnicity, "participant");
+}

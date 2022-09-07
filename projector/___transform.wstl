@@ -1,0 +1,17 @@
+def Transform_Dataset(resource) {
+    $this: CreateDataDictionaryTerminologies(resource);
+    //$this: CreateDataDictionaryConceptMap(resource);
+    $this: CreateDataDictionaryDefinitions(resource);
+    $this: BuildRawDataObs(resource);
+
+    if resource.participant? {
+        $this: ProcessParticipant(resource.study, resource.participant[]);
+        $this: ProcessGroup(resource.study, resource.subject[*]);
+        $this: ProcessStudy(resource.study);
+        $this: ProcessResearchSubject(resource.study, resource.participant[]);
+    }
+
+    if resource.condition? {
+        $this: ProcessCondition(resource.study, resource.condition[]);
+    }
+}

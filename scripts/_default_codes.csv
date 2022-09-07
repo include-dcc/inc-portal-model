@@ -1,0 +1,19 @@
+field_name,field_value,code,display,system
+sex,male,male,Male,http://hl7.org/fhir/administrative-gender
+sex,female,female,Female,http://hl7.org/fhir/administrative-gender
+sex,other,other,Other,http://hl7.org/fhir/administrative-gender
+sex,unknown,unknown,Unknown,http://hl7.org/fhir/administrative-gender
+race,white,2028-9,White,urn:oid:2.16.840.1.113883.6.238
+race,black or african american,2054-5,Black or African American,urn:oid:2.16.840.1.113883.6.238
+race,asian,2028-9,Asian,urn:oid:2.16.840.1.113883.6.238
+race,more than one race,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+race,american indian or alaska native,1002-5,American Indian or Alaska Native,urn:oid:2.16.840.1.113883.6.238
+race,native hawaiian or other pacific islander,2076-8,Native Hawaiian or Other Pacific Islander,urn:oid:2.16.840.1.113883.6.238
+race,other,other,Other,http://hl7.org/fhir/administrative-gender
+race,prefer not to answer,ASKU,asked but unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+race,unknown,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+ethnicity,not hispanic or latino,2186-5,Not Hispanic or Latino,urn:oid:2.16.840.1.113883.6.238
+ethnicity,hispanic or latino,2135-2,Hispanic or Latino,urn:oid:2.16.840.1.113883.6.238
+ethnicity,prefer not to answer,ASKU,asked but unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+ethnicity,unknown,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+condition_interpretation,Observed,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status
