@@ -24,6 +24,7 @@ def Study(study) {
 
     // As per request 2022-03-15, we'll add a couple keywords 
     keyword[0].coding: HarmonizeMapped(study.id, "IncludeProgram");
+    keyword[0].text: "INCLUDE";
     keyword[].coding[].code: study.id;
 
     // As per request 2022-03-26, we'll stash the URL for the project's website in relatedArtifact
