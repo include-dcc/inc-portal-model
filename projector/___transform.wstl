@@ -6,6 +6,8 @@ def Transform_Dataset(resource) {
 
     if resource.participant? {
         $this: ProcessParticipant(resource.study, resource.participant[]);
+        $this: ProcessDownSyndromeStatus(resource.study, resource.participant[]);
+
         $this: ProcessGroup(resource.study, resource.participant[*]);
         $this: ProcessStudy(resource.study);
         $this: ProcessResearchSubject(resource.study, resource.participant[]);

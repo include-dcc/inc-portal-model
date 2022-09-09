@@ -19,6 +19,7 @@ def Group(study, subjects) {
     identifier[0].use: "official";
     identifier[1].value (if study.accession?): study.accession;
     identifier[1].system (if study.accession?): "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id="
+
     type: "person";
     actual: true;
     member: Reference_Enrollment(study, subjects[]);

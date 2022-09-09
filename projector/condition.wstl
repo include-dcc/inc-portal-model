@@ -1,4 +1,40 @@
 
+def BuildDSConditionId(study, participant) {
+    $this: $StrCat(participant.participant_id, ".", "Down Syndrome Status", ".", "MONDO:0008608");
+}
+
+// Definition: Construct a Condition resource for T21 (Down Syndrome) from 
+// participant table
+//
+// Arguments: 
+//  study - This is the full study object created by Whistler
+//  participant - Row containing Down Syndrome Status (T21 is "case")
+//
+def DownSyndrome(study, participant) {
+    var subject_id: participant.participant_id;
+    var coding: HarmonizeMapped(participant.down_syndrome_status, "Down Syndrome Status");
+
+    if (participant.down_syndrome_status = "T21") {
+        meta.tag[]: StudyMeta(study);
+        
+        identifier[]: Key_Identifier(study, "Condition", BuildDSConditionId(study, participant));
+        identifier[0].use: "official";
+        subject: Reference_Key_Identifier(study, "Patient", subject_id);
+
+        // Strip out the local coding. DS status is different. We can't get 
+        // here if it's not confirmed so we'll hard code the term we would
+        // have gotten for a normal condition.
+        verificationStatus.coding: HarmonizeWithFilter("Observed", "Condition Interpretation", "hl7.org");
+
+        category[].coding[]: BuildCoding("encounter-diagnosis", "Encounter Diagnosis", "http://terminology.hl7.org/CodeSystem/condition-category");
+
+        code.coding[]: coding;
+        code.coding[]: HarmonizeMapped("Down Syndrome Status", "participant");
+        code.text: participant.down_syndrome_status;
+
+        resourceType: "Condition";
+    }
+}
 
 // Definition: Construct a Condition record. These will have either Mondo and/or HP code
 //
@@ -35,4 +71,8 @@ def Condition(study, condition) {
 
 def ProcessCondition(study, condition) {
     out condition: Condition(study, condition);
+}
+
+def ProcessDownSyndromeStatus(study, participant) {
+    out ds_condition: DownSyndrome(study, participant);
 }

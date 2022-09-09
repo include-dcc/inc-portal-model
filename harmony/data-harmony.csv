@@ -25,7 +25,7 @@ Not Hispanic or Latino,Not Hispanic or Latino,participant-dd,Ethnicity,Ethnicity
 Hispanic or Latino,Hispanic or Latino,participant-dd,Ethnicity,Ethnicity,2135-2,Hispanic or Latino,urn:oid:2.16.840.1.113883.6.238,
 Prefer not to answer,Prefer not to answer,participant-dd,Ethnicity,Ethnicity,ASKU,asked but unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,
 Unknown,Unknown,participant-dd,Ethnicity,Ethnicity,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,
-T21,Trisomy 21,participant-dd,Down Syndrome Status,Down Syndrome Status,,,,
+T21,Trisomy 21,participant-dd,Down Syndrome Status,Down Syndrome Status,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,
 D21,"Disomy 21, euploid",participant-dd,Down Syndrome Status,Down Syndrome Status,,,,
 Depression,Depression,condition,HPO Code,condition_description,0000716,Depression,http://purl.obolibrary.org/obo/hp.owl,
 Depression,depressive disorder,condition,MONDO Code,condition_description,0002050,depressive disorder,http://purl.obolibrary.org/obo/mondo.owl,

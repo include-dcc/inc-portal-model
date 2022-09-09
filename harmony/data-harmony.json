@@ -567,6 +567,23 @@
     },
     {
       "source": "Down Syndrome Status",
+      "target": "http://purl.obolibrary.org/obo/mondo.owl",
+      "element": [
+        {
+          "code": "T21",
+          "display": "Trisomy 21",
+          "target": [
+            {
+              "code": "MONDO:0008608",
+              "display": "Down Syndrome",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Down Syndrome Status",
       "target": "self",
       "element": [
         {
@@ -8215,7 +8232,7 @@
     },
     {
       "source": "DataSet",
-      "target": "https://includedcc.org/abc-ds/fhir/CodeSystem/data-dictionary/ABC-DS/dataset",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/dataset",
       "element": [
         {
           "code": "participant",
@@ -8243,7 +8260,7 @@
     },
     {
       "source": "Study Code",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/participant/study_code",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/study_code",
       "element": [
         {
           "code": "ABC-DS",
@@ -8458,7 +8475,7 @@
     },
     {
       "source": "Family Type",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/participant/family_type",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/family_type",
       "element": [
         {
           "code": "Proband-only",
@@ -8519,7 +8536,7 @@
     },
     {
       "source": "Sex",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/participant/sex",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/sex",
       "element": [
         {
           "code": "Male",
@@ -8569,7 +8586,7 @@
     },
     {
       "source": "Race",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/participant/race",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/race",
       "element": [
         {
           "code": "White",
@@ -8674,7 +8691,7 @@
     },
     {
       "source": "Ethnicity",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/participant/ethnicity",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/ethnicity",
       "element": [
         {
           "code": "Not Hispanic or Latino",
@@ -8724,7 +8741,7 @@
     },
     {
       "source": "Down Syndrome Status",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/participant/down_syndrome_status",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/down_syndrome_status",
       "element": [
         {
           "code": "T21",
@@ -8752,7 +8769,7 @@
     },
     {
       "source": "participant",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/participant",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant",
       "element": [
         {
           "code": "Study Code",
@@ -8912,7 +8929,7 @@
     },
     {
       "source": "Condition Interpretation",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/condition/condition_interpretation",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/condition/condition_interpretation",
       "element": [
         {
           "code": "Observed",
@@ -8940,7 +8957,7 @@
     },
     {
       "source": "Condition Source",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/condition/condition_source",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/condition/condition_source",
       "element": [
         {
           "code": "Clinical",
@@ -8968,7 +8985,7 @@
     },
     {
       "source": "condition",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/condition",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/condition",
       "element": [
         {
           "code": "Study Code",
