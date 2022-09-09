@@ -16,6 +16,7 @@ ethnicity,not hispanic or latino,2186-5,Not Hispanic or Latino,urn:oid:2.16.840.
 ethnicity,hispanic or latino,2135-2,Hispanic or Latino,urn:oid:2.16.840.1.113883.6.238
 ethnicity,prefer not to answer,ASKU,asked but unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 ethnicity,unknown,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+Condition Interpretation,Observed,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status
 condition_interpretation,Observed,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status
 IncludeProgram,HTP,INCLUDE,INCLUDE,https://includedcc.org/fhir/code-systems/programs
 IncludeProgram,DSC,INCLUDE,INCLUDE,https://includedcc.org/fhir/code-systems/programs

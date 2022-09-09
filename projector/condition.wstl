@@ -20,11 +20,10 @@ def Condition(study, condition) {
         identifier[0].use: "official";
         subject: Reference_Key_Identifier(study, "Patient", subject_id);
 
-        verificationStatus: HarmonizeAsCoding(condition.condition_interpretation, "ConditionPresent");
+        // Strip out the local coding
+        verificationStatus.coding: HarmonizeWithFilter(condition.condition_interpretation, "Condition Interpretation", "hl7.org");
 
-        category[0].coding[0].system: "http://terminology.hl7.org/CodeSystem/condition-category";
-        category[0].coding[0].code: "encounter-diagnosis";
-        category[0].coding[0].display: "Encounter Diagnosis";
+        category[].coding[]: BuildCoding("encounter-diagnosis", "Encounter Diagnosis", "http://terminology.hl7.org/CodeSystem/condition-category");
 
         code.coding[]: coding;
         code.coding[]: HarmonizeMapped("Condition Description", "condition");

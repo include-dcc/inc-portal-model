@@ -5,6 +5,23 @@
   "group": [
     {
       "source": "Condition Interpretation",
+      "target": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+      "element": [
+        {
+          "code": "Observed",
+          "display": "Observed",
+          "target": [
+            {
+              "code": "confirmed",
+              "display": "Confirmed",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Condition Interpretation",
       "target": "self",
       "element": [
         {
@@ -8197,108 +8214,8 @@
       ]
     },
     {
-      "source": "IncludeProgram",
-      "target": "https://includedcc.org/fhir/code-systems/programs",
-      "element": [
-        {
-          "code": "HTP",
-          "display": "HTP",
-          "target": [
-            {
-              "code": "INCLUDE-KF",
-              "display": "INCLUDE/KF",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "ABC-DS",
-          "display": "ABC-DS",
-          "target": [
-            {
-              "code": "INCLUDE",
-              "display": "INCLUDE",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "DSC",
-          "display": "DSC",
-          "target": [
-            {
-              "code": "INCLUDE",
-              "display": "INCLUDE",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "BRI-DSR",
-          "display": "BRI-DSR",
-          "target": [
-            {
-              "code": "INCLUDE",
-              "display": "INCLUDE",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "IncludeProgram",
-      "target": "self",
-      "element": [
-        {
-          "code": "HTP",
-          "display": "HTP",
-          "target": [
-            {
-              "code": "HTP",
-              "display": "HTP",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "ABC-DS",
-          "display": "ABC-DS",
-          "target": [
-            {
-              "code": "ABC-DS",
-              "display": "ABC-DS",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "DSC",
-          "display": "DSC",
-          "target": [
-            {
-              "code": "DSC",
-              "display": "DSC",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "BRI-DSR",
-          "display": "BRI-DSR",
-          "target": [
-            {
-              "code": "BRI-DSR",
-              "display": "BRI-DSR",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "source": "DataSet",
-      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/dataset",
+      "target": "https://includedcc.org/abc-ds/fhir/CodeSystem/data-dictionary/ABC-DS/dataset",
       "element": [
         {
           "code": "participant",
@@ -8326,7 +8243,7 @@
     },
     {
       "source": "Study Code",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/study_code",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/participant/study_code",
       "element": [
         {
           "code": "ABC-DS",
@@ -8541,7 +8458,7 @@
     },
     {
       "source": "Family Type",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/family_type",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/participant/family_type",
       "element": [
         {
           "code": "Proband-only",
@@ -8602,7 +8519,7 @@
     },
     {
       "source": "Sex",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/sex",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/participant/sex",
       "element": [
         {
           "code": "Male",
@@ -8652,7 +8569,7 @@
     },
     {
       "source": "Race",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/race",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/participant/race",
       "element": [
         {
           "code": "White",
@@ -8757,7 +8674,7 @@
     },
     {
       "source": "Ethnicity",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/ethnicity",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/participant/ethnicity",
       "element": [
         {
           "code": "Not Hispanic or Latino",
@@ -8807,7 +8724,7 @@
     },
     {
       "source": "Down Syndrome Status",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/down_syndrome_status",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/participant/down_syndrome_status",
       "element": [
         {
           "code": "T21",
@@ -8835,7 +8752,7 @@
     },
     {
       "source": "participant",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/participant",
       "element": [
         {
           "code": "Study Code",
@@ -8995,7 +8912,7 @@
     },
     {
       "source": "Condition Interpretation",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/condition/condition_interpretation",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/condition/condition_interpretation",
       "element": [
         {
           "code": "Observed",
@@ -9023,7 +8940,7 @@
     },
     {
       "source": "Condition Source",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/condition/condition_source",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/condition/condition_source",
       "element": [
         {
           "code": "Clinical",
@@ -9051,7 +8968,7 @@
     },
     {
       "source": "condition",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/condition",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/ABC-DS/condition",
       "element": [
         {
           "code": "Study Code",

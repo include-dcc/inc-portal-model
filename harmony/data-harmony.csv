@@ -1,5 +1,5 @@
 local code,text,table_name,parent_varname,local code system,code,display,code system,comment
-Observed,Observed,condition-dd,Condition Interpretation,Condition Interpretation,,,,
+Observed,Observed,condition-dd,Condition Interpretation,Condition Interpretation,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
 Not Observed,Not Observed,condition-dd,Condition Interpretation,Condition Interpretation,,,,
 Clinical,Clinical,condition-dd,Condition Source,Condition Source,,,,
 Self-Reported,Self-Reported,condition-dd,Condition Source,Condition Source,,,,
@@ -414,7 +414,3 @@ Has the participant ever been diagnosed with any sleep problems? - Yes,Sleep dis
 Has the participant ever been diagnosed with any sleep problems? - Yes,sleep disorder,condition,MONDO Code,condition_description,0100081,sleep disorder,http://purl.obolibrary.org/obo/mondo.owl,
 Has the participant ever been diagnosed with a skeletal problem (problems with the bones or joints)? - Yes,Abnormality of the skeletal system,condition,HPO Code,condition_description,0000924,Abnormality of the skeletal system,http://purl.obolibrary.org/obo/hp.owl,
 Has the participant ever been diagnosed with a skeletal problem (problems with the bones or joints)? - Yes,skeletal system disorder,condition,MONDO Code,condition_description,0005172,skeletal system disorder,http://purl.obolibrary.org/obo/mondo.owl,
-HTP,HTP,,,IncludeProgram,INCLUDE-KF,INCLUDE/KF,https://includedcc.org/fhir/code-systems/programs,
-ABC-DS,ABC-DS,,,IncludeProgram,INCLUDE,INCLUDE,https://includedcc.org/fhir/code-systems/programs,
-DSC,DSC,,,IncludeProgram,INCLUDE,INCLUDE,https://includedcc.org/fhir/code-systems/programs,
-BRI-DSR,BRI-DSR,,,IncludeProgram,INCLUDE,INCLUDE,https://includedcc.org/fhir/code-systems/programs,

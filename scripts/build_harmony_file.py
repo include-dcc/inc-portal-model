@@ -145,10 +145,12 @@ class DefaultCodings:
                 DefaultCodings._header = reader.fieldnames
 
             for line in reader:
-                self.coding_list[line['field_name']][line['field_value']] = line
+                self.coding_list[line['field_name'].lower()][line['field_value'].lower()] = line
 
     def match_coding(self, field_name, value):
         match = None
+        if field_name.lower() == "condition interpretation":
+            pdb.set_trace()
         if field_name.lower() in self.coding_list:
             match = self.coding_list[field_name.lower()].get(value.lower())
         if match is None:
