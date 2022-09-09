@@ -18,7 +18,6 @@ def FamilyIdObservation(study, tablename, varname, value, family_type) {
         
         // This is technically how you are expected to link to ODs, but it isn't working in the current version of FHIR
         // basdOn[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, tablename, varname));
-        code.text: HarmonizedLocalDisplay(varname, tablename);
         code.coding[]: HarmonizeMapped("Family ID", "participant");
         code.coding[]: HarmonizeMapped(family_type, "Family Type");
         valueString: value;
