@@ -118,7 +118,14 @@ def SubjectGroup(study, subjectids, filename) {
 }
 
 def FileCategoryMap(study, varname, value) {
-    var code: HarmonizeMapped(value, varname);
+    // There is something weird with the term 'Gene expression quantifications'
+    // that is causing FHIR errors. So, I'm dropping all local codes 
+    // for these until we are finished with the september release.
+    //
+    // var code: HarmonizeMapped(value, varname);
+    
+    
+    var code: HarmonizeWithFilter(value, varname, "https://includedcc.org/fhir/")
 
     if (code?) {
         coding: code;
