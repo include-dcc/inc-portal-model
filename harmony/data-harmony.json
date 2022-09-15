@@ -611,6 +611,170 @@
       ]
     },
     {
+      "source": "Data Category",
+      "target": "https://includedcc.org/fhir/code-systems/data_categories",
+      "element": [
+        {
+          "code": "Transcriptomics",
+          "display": "Transcriptomics",
+          "target": [
+            {
+              "code": "Transcriptomics",
+              "display": "Transcriptomics",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Data Category",
+      "target": "self",
+      "element": [
+        {
+          "code": "Transcriptomics",
+          "display": "Transcriptomics",
+          "target": [
+            {
+              "code": "Transcriptomics",
+              "display": "Transcriptomics",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Experiment Strategy",
+      "target": "https://includedcc.org/fhir/code-systems/experimental_strategies",
+      "element": [
+        {
+          "code": "RNAseq",
+          "display": "RNA-Seq",
+          "target": [
+            {
+              "code": "RNA-Seq",
+              "display": "RNA-Seq",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Experiment Strategy",
+      "target": "self",
+      "element": [
+        {
+          "code": "RNAseq",
+          "display": "RNA-Seq",
+          "target": [
+            {
+              "code": "RNAseq",
+              "display": "RNA-Seq",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Data Type",
+      "target": "https://includedcc.org/fhir/code-systems/data_types",
+      "element": [
+        {
+          "code": "Gene expression quantifications",
+          "display": "Gene Expression Quantification",
+          "target": [
+            {
+              "code": "Gene-Expression-Quantifications",
+              "display": "Gene Expression Quantifications",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Data Type",
+      "target": "self",
+      "element": [
+        {
+          "code": "Gene expression quantifications",
+          "display": "Gene Expression Quantification",
+          "target": [
+            {
+              "code": "Gene expression quantifications",
+              "display": "Gene Expression Quantification",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Sample Type",
+      "target": "http://purl.obolibrary.org/obo/obi.owl",
+      "element": [
+        {
+          "code": "RNA",
+          "display": "RNA",
+          "target": [
+            {
+              "code": "OBI:0000880",
+              "display": "RNA extract",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Sample Type",
+      "target": "self",
+      "element": [
+        {
+          "code": "RNA",
+          "display": "RNA",
+          "target": [
+            {
+              "code": "RNA",
+              "display": "RNA",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Peripheral Whole Blood",
+          "display": "Blood Sample",
+          "target": [
+            {
+              "code": "Peripheral Whole Blood",
+              "display": "Blood Sample",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Sample Type",
+      "target": "http://purl.obolibrary.org/obo/ncit.owl",
+      "element": [
+        {
+          "code": "Peripheral Whole Blood",
+          "display": "Blood Sample",
+          "target": [
+            {
+              "code": "C17610",
+              "display": "Blood Sample",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "source": "condition_description",
       "target": "http://purl.obolibrary.org/obo/hp.owl",
       "element": [
@@ -8255,6 +8419,28 @@
               "equivalence": "equivalent"
             }
           ]
+        },
+        {
+          "code": "specimen",
+          "display": "specimen.csv",
+          "target": [
+            {
+              "code": "specimen",
+              "display": "specimen.csv",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "file_manifest",
+          "display": "file_meta_data.csv",
+          "target": [
+            {
+              "code": "file_manifest",
+              "display": "file_meta_data.csv",
+              "equivalence": "equivalent"
+            }
+          ]
         }
       ]
     },
@@ -9137,6 +9323,260 @@
             {
               "code": "Other Code",
               "display": "Code for condition in another ontology (if no match in HPO, MONDO, or MAXO)",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "specimen",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/specimen",
+      "element": [
+        {
+          "code": "Collection ID",
+          "display": "Identifier for the eldest sample in a lineage of processed, pooled, or aliquoted samples. This may be the same as Parent Sample ID or Sample ID (if no processing was performed).",
+          "target": [
+            {
+              "code": "Collection ID",
+              "display": "Identifier for the eldest sample in a lineage of processed, pooled, or aliquoted samples. This may be the same as Parent Sample ID or Sample ID (if no processing was performed).",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Collection Sample Type",
+          "display": "Type of biological material comprising the collected sample",
+          "target": [
+            {
+              "code": "Collection Sample Type",
+              "display": "Type of biological material comprising the collected sample",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Sample ID",
+          "display": "Identifier for sample. A sample is a unique biological material. two samples with two different IDs are biologically distinct.",
+          "target": [
+            {
+              "code": "Sample ID",
+              "display": "Identifier for sample. A sample is a unique biological material. two samples with two different IDs are biologically distinct.",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Container ID",
+          "display": "Identifier for specific container/aliquot of sample, if applicable. For example, distinct aliquots of a sample will have the same Sample ID but different Container IDs.",
+          "target": [
+            {
+              "code": "Container ID",
+              "display": "Identifier for specific container/aliquot of sample, if applicable. For example, distinct aliquots of a sample will have the same Sample ID but different Container IDs.",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Sample Type",
+          "display": "Type of biological material comprising the sample",
+          "target": [
+            {
+              "code": "Sample Type",
+              "display": "Type of biological material comprising the sample",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Parent Sample ID",
+          "display": "Identifier for the direct parent from which Sample was derived, processed, pooled, etc. (if applicable)",
+          "target": [
+            {
+              "code": "Parent Sample ID",
+              "display": "Identifier for the direct parent from which Sample was derived, processed, pooled, etc. (if applicable)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Parent Sample Type",
+          "display": "Type of biological material comprising the parent sample",
+          "target": [
+            {
+              "code": "Parent Sample Type",
+              "display": "Type of biological material comprising the parent sample",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Age At Biospecimen Collection",
+          "display": "Age in days of participant at time of biospecimen collection",
+          "target": [
+            {
+              "code": "Age At Biospecimen Collection",
+              "display": "Age in days of participant at time of biospecimen collection",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Sample Availability",
+          "display": "Whether or not the sample is potentially available for sharing through the Virtual Biorepository",
+          "target": [
+            {
+              "code": "Sample Availability",
+              "display": "Whether or not the sample is potentially available for sharing through the Virtual Biorepository",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Volume",
+          "display": "Amount of sample in container",
+          "target": [
+            {
+              "code": "Volume",
+              "display": "Amount of sample in container",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Volume Unit",
+          "display": "Unit of sample volume",
+          "target": [
+            {
+              "code": "Volume Unit",
+              "display": "Unit of sample volume",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Laboratory Procedure",
+          "display": "Procedure by which Sample was derived from Parent Sample",
+          "target": [
+            {
+              "code": "Laboratory Procedure",
+              "display": "Procedure by which Sample was derived from Parent Sample",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Biospecimen Storage",
+          "display": "Method by which Container is stored",
+          "target": [
+            {
+              "code": "Biospecimen Storage",
+              "display": "Method by which Container is stored",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "file_manifest",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/file_manifest",
+      "element": [
+        {
+          "code": "File ID",
+          "display": "File identifier, assigned by DCC",
+          "target": [
+            {
+              "code": "File ID",
+              "display": "File identifier, assigned by DCC",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Data Access",
+          "display": "Type of access control on this file, determined by DCC",
+          "target": [
+            {
+              "code": "Data Access",
+              "display": "Type of access control on this file, determined by DCC",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Filename",
+          "display": "Synapse ID for file",
+          "target": [
+            {
+              "code": "Filename",
+              "display": "Synapse ID for file",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Data Category",
+          "display": "General category of data in file",
+          "target": [
+            {
+              "code": "Data Category",
+              "display": "General category of data in file",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Data Type",
+          "display": "Specific type of data contained in file",
+          "target": [
+            {
+              "code": "Data Type",
+              "display": "Specific type of data contained in file",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Experimental Strategy",
+          "display": "Experimental method used to obtain data in file",
+          "target": [
+            {
+              "code": "Experimental Strategy",
+              "display": "Experimental method used to obtain data in file",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Access URL",
+          "display": "Storage location for this file",
+          "target": [
+            {
+              "code": "Access URL",
+              "display": "Storage location for this file",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Format",
+          "display": "Format of file",
+          "target": [
+            {
+              "code": "Format",
+              "display": "Format of file",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Size",
+          "display": "Size of file",
+          "target": [
+            {
+              "code": "Size",
+              "display": "Size of file",
               "equivalence": "equivalent"
             }
           ]

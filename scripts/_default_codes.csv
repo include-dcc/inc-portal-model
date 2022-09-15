@@ -21,3 +21,8 @@ condition_interpretation,Observed,confirmed,Confirmed,http://terminology.hl7.org
 IncludeProgram,HTP,INCLUDE,INCLUDE,https://includedcc.org/fhir/code-systems/programs
 IncludeProgram,DSC,INCLUDE,INCLUDE,https://includedcc.org/fhir/code-systems/programs
 IncludeProgram,BRI-DSR,INCLUDE,INCLUDE,https://includedcc.org/fhir/code-systems/programs
+Transcriptomics,Transcriptomics,file_manifest,Data Category,Data Category,Transcriptomics,Transcriptomics,https://includedcc.org/fhir/code-systems/data_categories,
+RNAseq,RNA-Seq,file_manifest,Experiment Strategy,Experiment Strategy,RNA-Seq,RNA-Seq,https://includedcc.org/fhir/code-systems/experimental_strategies,
+Gene expression quantifications,Gene Expression Quantification,file_manifest,Data Type,Data Type,Gene-Expression-Quantifications,Gene Expression Quantifications,https://includedcc.org/fhir/code-systems/data_types,
+RNA,RNA,specimen,Sample Type,Sample Type,OBI:0000880,RNA extract,http://purl.obolibrary.org/obo/obi.owl,
+Peripheral Whole Blood,Blood Sample,specimen,Sample Type,Sample Type,C17610,Blood Sample,http://purl.obolibrary.org/obo/ncit.owl,

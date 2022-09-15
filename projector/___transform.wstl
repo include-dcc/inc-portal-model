@@ -19,4 +19,9 @@ def Transform_Dataset(resource) {
     if resource.condition? {
         $this: ProcessCondition(resource.study, resource.condition[]);
     }
+
+    if resource.specimen? {
+        var aliquots: [];
+        $this: ProcessSpecimenData(resource.study, resource.specimen[*], aliquots[*], resource.participant[*]);
+    }
 }

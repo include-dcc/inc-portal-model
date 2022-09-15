@@ -1,0 +1,54 @@
+// Specimen use the standard FHIR Specimen resource with a few potential specialized 
+// interpretations of the standard properties:
+//   * parent - If the specimen type is derived from another, the "parent" specimen is referenced here
+//   * processing[x].additive - References to the appropriate Substance associated with the preservation_method
+//   * aliquots are stored inside the .container array
+//
+def ProcessSpecimen(study, specimen, all_aliquots) {
+    // We may not get subject id or it's name will change. This is based on 
+    // RJC example but the final dataset may look very different.
+    //var subject_id: $SubStr(specimen.lab_id, 0, 7);
+    var subject_id: specimen.participant_id;
+
+    var aliquots: all_aliquots[where $.sample_id=specimen.sample_id];
+    
+    meta.tag[]: StudyMeta(study);
+    
+    identifier[0]: Key_Identifier(study, "Specimen", BuildSpecimenIdentifier(study, subject_id, specimen.sample_id));
+    identifier[0].use: "official";
+    
+    if (specimen.parent_sample_id?) {
+        parent[] (if specimen.parent_sample_id ~= specimen.sample_id): Reference_Key_Identifier(study, "Specimen", BuildSpecimenIdentifier(study, subject_id, specimen.parent_sample_id));
+    }
+
+    // Do we actually want to consider the volume inside "vial volume"
+
+    // Right now, the availability is tied to the aliquot but this information should go 
+    // inside the specimen unless we start using extensions
+    status: "unavailable";
+
+    var substance_code: HarmonizeMapped(specimen.preservation_method, "Specimen Additive");
+    if (substance_code?) {
+        processing[0].additive[0]: Reference_Key_Identifier(study, "Substance", BuildSubstanceIdentifier(study, specimen.preservation_method));
+    }
+
+    processing[0].description: specimen.laboratory_procedure;
+    condition[0].coding[]: HarmonizeMapped(specimen.preservation_method, "Specimen Condition");
+    condition[0].text: specimen.preservation_method;
+
+    type.coding[]: HarmonizeMapped(specimen.sample_type, "Sample Type");
+    type.text: specimen.sample_type
+
+    collection._collectedDateTime.extension[0] (if specimen.age_at_biospecimen_collection?): AgeAtExtension(study, subject_id, specimen.age_at_biospecimen_collection, "days");
+    //container[]: ProcessAliquot(study, subject_id, aliquots[0].content[]);
+
+    subject: Reference_Key_Identifier(study, "Patient", subject_id);
+    resourceType: "Specimen";    
+
+}
+
+def ProcessSpecimenData(study, all_specimen, all_aliquots) {
+    out file_tasks: SpecimenTask(study, all_specimen[]);
+    out files: ProcessFileManifestData(study, all_specimen[]);
+    out specimen: ProcessSpecimen(study, all_specimen[], all_aliquots[*]);
+}

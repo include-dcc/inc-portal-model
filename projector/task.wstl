@@ -1,0 +1,55 @@
+// Task
+def TaskReferenceID(study, sampleid) {
+    $this: $StrCat(study.id, ".", sampleid);
+}
+
+def InOutComponent(component_type, component_value) {
+    if (component_type = "Reference") {
+        type.coding[].code: "Reference";
+        valueReference: component_value;
+    }
+}
+
+def InOutFileReferences(study, manifest) {
+    $this: InOutComponent("Reference",  Reference_Key_Identifier(study, "DocumentReference", DocumentReferenceID(study, manifest.filename)));
+}
+
+def InOutQuantityComponent(study, tablename, varname, value) {
+
+    if (value?) {
+        type.coding[]: HarmonizeMapped(varname, tablename);
+        valueQuantity.value: $ParseFloat(value);
+    }
+}
+
+def SpecimenTask(study, sample) {
+    // I'm mimicking brian's tasks, and he's not using profiles for them. 
+    // They were probably created before google added support for them. However,
+    // rather than dealing with loading a model and all of that, I'm keeping it
+    // simple to avoid any unexpected hurdles since there is only a few work hours
+    // remaining before the data is going to be used
+    if ($ListLen(sample.file_manifest) > 0) {
+        var subject_id: sample.participant_id;
+        meta.tag[]: StudyMeta(study);
+
+        identifier[]: Key_Identifier(study, "Task", TaskReferenceID(study, sample.sample_id));
+        identifier[0].use: "official";
+
+        status: "accepted";
+        intent: "unknown";
+        resourceType: "Task";
+
+        // Focus is the sample used for the task being performed
+        focus: Reference_Key_Identifier(study, "Specimen", BuildSpecimenIdentifier(study, subject_id, sample.sample_id));
+
+        // For links the task to the patient
+        for: Reference_Key_Identifier(study, "Patient", subject_id);
+
+        // Input relates to whatever was used by the task during it's execution
+        input[]: InOutComponent("Reference", Reference_Key_Identifier(study, "Specimen", BuildSpecimenIdentifier(study, subject_id, sample.sample_id)));
+
+        output[]: InOutFileReferences(study, sample.file_manifest[]);
+    }
+}
+
+
