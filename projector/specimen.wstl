@@ -48,7 +48,7 @@ def ProcessSpecimen(study, specimen, all_aliquots) {
 }
 
 def ProcessSpecimenData(study, all_specimen, all_aliquots) {
-    out file_tasks: SpecimenTask(study, all_specimen[]);
+    //out file_tasks: SpecimenTask(study, all_specimen[]);
     out files: ProcessFileManifestData(study, all_specimen[]);
     out specimen: ProcessSpecimen(study, all_specimen[], all_aliquots[*]);
 }
