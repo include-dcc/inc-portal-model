@@ -26,3 +26,6 @@ RNAseq,RNA-Seq,file_manifest,Experiment Strategy,Experiment Strategy,RNA-Seq,RNA
 Gene expression quantifications,Gene Expression Quantification,file_manifest,Data Type,Data Type,Gene-Expression-Quantifications,Gene Expression Quantifications,https://includedcc.org/fhir/code-systems/data_types,
 RNA,RNA,specimen,Sample Type,Sample Type,OBI:0000880,RNA extract,http://purl.obolibrary.org/obo/obi.owl,
 Peripheral Whole Blood,Blood Sample,specimen,Sample Type,Sample Type,C17610,Blood Sample,http://purl.obolibrary.org/obo/ncit.owl,
+Other,Other,specimen,Data Type,Data Type,Alternative-Splicing,Alternative Splicing,https://includedcc.org/fhir/code-systems/data_types,
+Isoform Expression Quantification,Isoform Expression Quantification,specimen,Data Type,Data Type,Isoform-Expression-Quantifications,Isoform Expression Quantifications,https://includedcc.org/fhir/code-systems/data_types,
+Raw Gene Fusion,Raw Gene Fusion,specimen,Data Type,Data Type,Raw-Gene-Fusions,Raw Gene Fusions,https://includedcc.org/fhir/code-systems/data_types,

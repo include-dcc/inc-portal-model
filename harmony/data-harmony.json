@@ -692,6 +692,39 @@
               "equivalence": "equivalent"
             }
           ]
+        },
+        {
+          "code": "Other",
+          "display": "Other",
+          "target": [
+            {
+              "code": "Alternative-Splicing",
+              "display": "Alternative Splicing",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Isoform Expression Quantification",
+          "display": "Isoform Expression Quantification",
+          "target": [
+            {
+              "code": "Isoform-Expression-Quantifications",
+              "display": "Isoform Expression Quantifications",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Raw Gene Fusion",
+          "display": "Raw Gene Fusion",
+          "target": [
+            {
+              "code": "Raw-Gene-Fusions",
+              "display": "Raw Gene Fusions",
+              "equivalence": "equivalent"
+            }
+          ]
         }
       ]
     },
@@ -706,6 +739,39 @@
             {
               "code": "Gene expression quantifications",
               "display": "Gene Expression Quantification",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Other",
+          "display": "Other",
+          "target": [
+            {
+              "code": "Other",
+              "display": "Other",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Isoform Expression Quantification",
+          "display": "Isoform Expression Quantification",
+          "target": [
+            {
+              "code": "Isoform Expression Quantification",
+              "display": "Isoform Expression Quantification",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Raw Gene Fusion",
+          "display": "Raw Gene Fusion",
+          "target": [
+            {
+              "code": "Raw Gene Fusion",
+              "display": "Raw Gene Fusion",
               "equivalence": "equivalent"
             }
           ]
@@ -8446,7 +8512,7 @@
     },
     {
       "source": "Study Code",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/study_code",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/participant/study_code",
       "element": [
         {
           "code": "ABC-DS",
@@ -8661,7 +8727,7 @@
     },
     {
       "source": "Family Type",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/family_type",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/participant/family_type",
       "element": [
         {
           "code": "Proband-only",
@@ -8722,7 +8788,7 @@
     },
     {
       "source": "Sex",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/sex",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/participant/sex",
       "element": [
         {
           "code": "Male",
@@ -8772,7 +8838,7 @@
     },
     {
       "source": "Race",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/race",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/participant/race",
       "element": [
         {
           "code": "White",
@@ -8877,7 +8943,7 @@
     },
     {
       "source": "Ethnicity",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/ethnicity",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/participant/ethnicity",
       "element": [
         {
           "code": "Not Hispanic or Latino",
@@ -8927,7 +8993,7 @@
     },
     {
       "source": "Down Syndrome Status",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant/down_syndrome_status",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/participant/down_syndrome_status",
       "element": [
         {
           "code": "T21",
@@ -8955,7 +9021,7 @@
     },
     {
       "source": "participant",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/participant",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/participant",
       "element": [
         {
           "code": "Study Code",
@@ -9115,7 +9181,7 @@
     },
     {
       "source": "Condition Interpretation",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/condition/condition_interpretation",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/condition/condition_interpretation",
       "element": [
         {
           "code": "Observed",
@@ -9143,7 +9209,7 @@
     },
     {
       "source": "Condition Source",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/condition/condition_source",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/condition/condition_source",
       "element": [
         {
           "code": "Clinical",
@@ -9171,7 +9237,7 @@
     },
     {
       "source": "condition",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/condition",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/condition",
       "element": [
         {
           "code": "Study Code",
@@ -9330,8 +9396,335 @@
       ]
     },
     {
+      "source": "Collection Sample Type",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/specimen/collection_sample_type",
+      "element": [
+        {
+          "code": "Whole blood",
+          "display": "Whole blood",
+          "target": [
+            {
+              "code": "Whole blood",
+              "display": "Whole blood",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Not reported",
+          "display": "Not reported",
+          "target": [
+            {
+              "code": "Not reported",
+              "display": "Not reported",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Saliva",
+          "display": "Saliva",
+          "target": [
+            {
+              "code": "Saliva",
+              "display": "Saliva",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Derived cell line",
+          "display": "Derived cell line",
+          "target": [
+            {
+              "code": "Derived cell line",
+              "display": "Derived cell line",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Sample Type",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/specimen/sample_type",
+      "element": [
+        {
+          "code": "Plasma",
+          "display": "Plasma",
+          "target": [
+            {
+              "code": "Plasma",
+              "display": "Plasma",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "White blood cells",
+          "display": "White blood cells",
+          "target": [
+            {
+              "code": "White blood cells",
+              "display": "White blood cells",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Red blood cells",
+          "display": "Red blood cells",
+          "target": [
+            {
+              "code": "Red blood cells",
+              "display": "Red blood cells",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DNA",
+          "display": "DNA",
+          "target": [
+            {
+              "code": "DNA",
+              "display": "DNA",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RNA",
+          "display": "RNA",
+          "target": [
+            {
+              "code": "RNA",
+              "display": "RNA",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Peripheral blood mononuclear cells",
+          "display": "Peripheral blood mononuclear cells",
+          "target": [
+            {
+              "code": "Peripheral blood mononuclear cells",
+              "display": "Peripheral blood mononuclear cells",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CD4+ Tconv cells",
+          "display": "CD4+ Tconv cells",
+          "target": [
+            {
+              "code": "CD4+ Tconv cells",
+              "display": "CD4+ Tconv cells",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NK cells",
+          "display": "NK cells",
+          "target": [
+            {
+              "code": "NK cells",
+              "display": "NK cells",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Monocytes",
+          "display": "Monocytes",
+          "target": [
+            {
+              "code": "Monocytes",
+              "display": "Monocytes",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CD8+ T cells",
+          "display": "CD8+ T cells",
+          "target": [
+            {
+              "code": "CD8+ T cells",
+              "display": "CD8+ T cells",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "B cells",
+          "display": "B cells",
+          "target": [
+            {
+              "code": "B cells",
+              "display": "B cells",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Granulocytes",
+          "display": "Granulocytes",
+          "target": [
+            {
+              "code": "Granulocytes",
+              "display": "Granulocytes",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Treg cells",
+          "display": "Treg cells",
+          "target": [
+            {
+              "code": "Treg cells",
+              "display": "Treg cells",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Parent Sample Type",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/specimen/parent_sample_type",
+      "element": [
+        {
+          "code": "Not Reported",
+          "display": "Not Reported",
+          "target": [
+            {
+              "code": "Not Reported",
+              "display": "Not Reported",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Peripheral Whole Blood",
+          "display": "Peripheral Whole Blood",
+          "target": [
+            {
+              "code": "Peripheral Whole Blood",
+              "display": "Peripheral Whole Blood",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Derived Cell Line",
+          "display": "Derived Cell Line",
+          "target": [
+            {
+              "code": "Derived Cell Line",
+              "display": "Derived Cell Line",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Saliva",
+          "display": "Saliva",
+          "target": [
+            {
+              "code": "Saliva",
+              "display": "Saliva",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Whole blood",
+          "display": "Whole blood",
+          "target": [
+            {
+              "code": "Whole blood",
+              "display": "Whole blood",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "WBCs",
+          "display": "WBCs",
+          "target": [
+            {
+              "code": "WBCs",
+              "display": "WBCs",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Sample Availability",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/specimen/sample_availability",
+      "element": [
+        {
+          "code": "Available",
+          "display": "Available",
+          "target": [
+            {
+              "code": "Available",
+              "display": "Available",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Unavailable",
+          "display": "Unavailable",
+          "target": [
+            {
+              "code": "Unavailable",
+              "display": "Unavailable",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Biospecimen Storage",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/specimen/biospecimen_storage",
+      "element": [
+        {
+          "code": "Minus 80 degrees Celsius",
+          "display": "Minus 80 degrees Celsius",
+          "target": [
+            {
+              "code": "Minus 80 degrees Celsius",
+              "display": "Minus 80 degrees Celsius",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Liquid nitrogen storage",
+          "display": "Liquid nitrogen storage",
+          "target": [
+            {
+              "code": "Liquid nitrogen storage",
+              "display": "Liquid nitrogen storage",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "source": "specimen",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/specimen",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/specimen",
       "element": [
         {
           "code": "Collection ID",
@@ -9479,8 +9872,373 @@
       ]
     },
     {
+      "source": "Data Access",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/file_manifest/data_access",
+      "element": [
+        {
+          "code": "Controlled",
+          "display": "Controlled",
+          "target": [
+            {
+              "code": "Controlled",
+              "display": "Controlled",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Registered",
+          "display": "Registered",
+          "target": [
+            {
+              "code": "Registered",
+              "display": "Registered",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Open",
+          "display": "Open",
+          "target": [
+            {
+              "code": "Open",
+              "display": "Open",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Data Category",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/file_manifest/data_category",
+      "element": [
+        {
+          "code": "Clinical",
+          "display": "Clinical",
+          "target": [
+            {
+              "code": "Clinical",
+              "display": "Clinical",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Genomics",
+          "display": "Genomics",
+          "target": [
+            {
+              "code": "Genomics",
+              "display": "Genomics",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Proteomics",
+          "display": "Proteomics",
+          "target": [
+            {
+              "code": "Proteomics",
+              "display": "Proteomics",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Metabolomics",
+          "display": "Metabolomics",
+          "target": [
+            {
+              "code": "Metabolomics",
+              "display": "Metabolomics",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Immune profiling",
+          "display": "Immune profiling",
+          "target": [
+            {
+              "code": "Immune profiling",
+              "display": "Immune profiling",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Transcriptomics",
+          "display": "Transcriptomics",
+          "target": [
+            {
+              "code": "Transcriptomics",
+              "display": "Transcriptomics",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Data Type",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/file_manifest/data_type",
+      "element": [
+        {
+          "code": "Preprocessed metabolite relative abundance",
+          "display": "Preprocessed metabolite relative abundance",
+          "target": [
+            {
+              "code": "Preprocessed metabolite relative abundance",
+              "display": "Preprocessed metabolite relative abundance",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Absolute protein concentration",
+          "display": "Absolute protein concentration",
+          "target": [
+            {
+              "code": "Absolute protein concentration",
+              "display": "Absolute protein concentration",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Aligned reads",
+          "display": "Aligned reads",
+          "target": [
+            {
+              "code": "Aligned reads",
+              "display": "Aligned reads",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Simple nucleotide variations",
+          "display": "Simple nucleotide variations",
+          "target": [
+            {
+              "code": "Simple nucleotide variations",
+              "display": "Simple nucleotide variations",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GVCF",
+          "display": "GVCF",
+          "target": [
+            {
+              "code": "GVCF",
+              "display": "GVCF",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Gene expression quantifications",
+          "display": "Gene expression quantifications",
+          "target": [
+            {
+              "code": "Gene expression quantifications",
+              "display": "Gene expression quantifications",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Gene fusions",
+          "display": "Gene fusions",
+          "target": [
+            {
+              "code": "Gene fusions",
+              "display": "Gene fusions",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Somatic copy number variations",
+          "display": "Somatic copy number variations",
+          "target": [
+            {
+              "code": "Somatic copy number variations",
+              "display": "Somatic copy number variations",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Somatic structural variations",
+          "display": "Somatic structural variations",
+          "target": [
+            {
+              "code": "Somatic structural variations",
+              "display": "Somatic structural variations",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Annotated Gene Fusion",
+          "display": "Annotated Gene Fusion",
+          "target": [
+            {
+              "code": "Annotated Gene Fusion",
+              "display": "Annotated Gene Fusion",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Isoform Expression Quantification",
+          "display": "Isoform Expression Quantification",
+          "target": [
+            {
+              "code": "Isoform Expression Quantification",
+              "display": "Isoform Expression Quantification",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Other",
+          "display": "Other",
+          "target": [
+            {
+              "code": "Other",
+              "display": "Other",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Raw Gene Fusion",
+          "display": "Raw Gene Fusion",
+          "target": [
+            {
+              "code": "Raw Gene Fusion",
+              "display": "Raw Gene Fusion",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Format",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/file_manifest/format",
+      "element": [
+        {
+          "code": "tsv",
+          "display": "tsv",
+          "target": [
+            {
+              "code": "tsv",
+              "display": "tsv",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "cram",
+          "display": "cram",
+          "target": [
+            {
+              "code": "cram",
+              "display": "cram",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "gvcf",
+          "display": "gvcf",
+          "target": [
+            {
+              "code": "gvcf",
+              "display": "gvcf",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "vcf",
+          "display": "vcf",
+          "target": [
+            {
+              "code": "vcf",
+              "display": "vcf",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "maf",
+          "display": "maf",
+          "target": [
+            {
+              "code": "maf",
+              "display": "maf",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "txt",
+          "display": "txt",
+          "target": [
+            {
+              "code": "txt",
+              "display": "txt",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "pdf",
+          "display": "pdf",
+          "target": [
+            {
+              "code": "pdf",
+              "display": "pdf",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "html",
+          "display": "html",
+          "target": [
+            {
+              "code": "html",
+              "display": "html",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "png",
+          "display": "png",
+          "target": [
+            {
+              "code": "png",
+              "display": "png",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "source": "file_manifest",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CodeSystem/data-dictionary/BRI-DSR/file_manifest",
+      "target": "https://includedcc.org/bri-dsr/fhir/CodeSystem/data-dictionary/BRI-DSR/file_manifest",
       "element": [
         {
           "code": "File ID",
