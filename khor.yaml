@@ -41,5 +41,26 @@ dataset:
         type: type
         values: values
     code_harmonization: harmony/data-harmony.csv  
+  specimen:
+    filename: data/tables/BRI-DSR/specimen.csv
+    data_dictionary:
+      filename: data/dd/specimen-dd.csv
+      colnames: 
+        varname: attribute
+        desc: description
+        type: type
+        values: valid values
+  file_manifest:
+    filename: data/tables/BRI-DSR/file_meta_data.csv
+    embed: 
+      dataset: specimen
+      colname: sample_id
+    data_dictionary:
+      filename: data/dd/file_meta_data-dd.csv
+      colnames: 
+        varname: attribute
+        desc: description
+        type: type
+        values: valid values
 active_tables:
   ALL: true
