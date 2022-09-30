@@ -21,11 +21,16 @@ condition_interpretation,Observed,confirmed,Confirmed,http://terminology.hl7.org
 IncludeProgram,HTP,INCLUDE,INCLUDE,https://includedcc.org/fhir/code-systems/programs
 IncludeProgram,DSC,INCLUDE,INCLUDE,https://includedcc.org/fhir/code-systems/programs
 IncludeProgram,BRI-DSR,INCLUDE,INCLUDE,https://includedcc.org/fhir/code-systems/programs
-Transcriptomics,Transcriptomics,file_manifest,Data Category,Data Category,Transcriptomics,Transcriptomics,https://includedcc.org/fhir/code-systems/data_categories,
-RNAseq,RNA-Seq,file_manifest,Experiment Strategy,Experiment Strategy,RNA-Seq,RNA-Seq,https://includedcc.org/fhir/code-systems/experimental_strategies,
-Gene expression quantifications,Gene Expression Quantification,file_manifest,Data Type,Data Type,Gene-Expression-Quantifications,Gene Expression Quantifications,https://includedcc.org/fhir/code-systems/data_types,
-RNA,RNA,specimen,Sample Type,Sample Type,OBI:0000880,RNA extract,http://purl.obolibrary.org/obo/obi.owl,
-Peripheral Whole Blood,Blood Sample,specimen,Sample Type,Sample Type,C17610,Blood Sample,http://purl.obolibrary.org/obo/ncit.owl,
-Other,Other,specimen,Data Type,Data Type,Alternative-Splicing,Alternative Splicing,https://includedcc.org/fhir/code-systems/data_types,
-Isoform Expression Quantification,Isoform Expression Quantification,specimen,Data Type,Data Type,Isoform-Expression-Quantifications,Isoform Expression Quantifications,https://includedcc.org/fhir/code-systems/data_types,
-Raw Gene Fusion,Raw Gene Fusion,specimen,Data Type,Data Type,Raw-Gene-Fusions,Raw Gene Fusions,https://includedcc.org/fhir/code-systems/data_types,
+Data Category,Transcriptomics,Transcriptomics,Transcriptomics,https://includedcc.org/fhir/code-systems/data_categories,
+Experiment Strategy,RNA-Seq,RNA-Seq,RNA-Seq,https://includedcc.org/fhir/code-systems/experimental_strategies,
+Data Type,Gene Expression Quantification,Gene-Expression-Quantifications,Gene Expression Quantifications,https://includedcc.org/fhir/code-systems/data_types,
+Sample Type,RNA,OBI:0000880,RNA extract,http://purl.obolibrary.org/obo/obi.owl,
+Sample Type,Blood Sample,C17610,Blood Sample,http://purl.obolibrary.org/obo/ncit.owl,
+Data Type,Other,Alternative-Splicing,Alternative Splicing,https://includedcc.org/fhir/code-systems/data_types,
+Data Type,Isoform Expression Quantification,Isoform-Expression-Quantifications,Isoform Expression Quantifications,https://includedcc.org/fhir/code-systems/data_types,
+Data Type,Raw Gene Fusion,Raw-Gene-Fusions,Raw Gene Fusions,https://includedcc.org/fhir/code-systems/data_types,
+Access Type,Registered,registered,Registered,https://includedcc.org/fhir/code-systems/data_access_types,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
+INCLUDE,INCLUDE,INCLUDE,INCLUDE,https://includedcc.org/fhir/code-systems/programs
+ABC-DS,ABC-DS,INCLUDE,INCLUDE,https://includedcc.org/fhir/code-systems/programs
+BRI-DSR,BRI-DSR,INCLUDE,INCLUDE,https://includedcc.org/fhir/code-systems/programs
+DSC,DSC,INCLUDE,INCLUDE,https://includedcc.org/fhir/code-systems/programs
