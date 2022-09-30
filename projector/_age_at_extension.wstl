@@ -40,4 +40,24 @@ def AgeAtExtension(study, subject_id, required age, age_unit) {
         extension[3].valueDuration.system: "http://unitsofmeasure.org";
         extension[3].valueDuration.code: "days";
     }
+    if (age_unit = "years_as_days") {
+        var years: $ParseInt(age);
+
+        // Whistle doesn't tolerate decimal values for parsing ints so we 
+        // split on the dot and use the first value in the array
+        var days: $StrSplit($StrCat("", (years * 365.25)), ".");
+
+        url: "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime";
+        extension[0].url: "target";
+        extension[0].valueReference: Reference_Key_Identifier(study, "Patient", subject_id);
+        extension[1].url: "targetPath";
+        extension[1].valueString: "birthDate";
+        extension[2].url: "relationship";
+        extension[2].valueCode: "after";
+        extension[3].url: "offset";
+        extension[3].valueDuration.value: $ParseInt(days[0]);
+        extension[3].valueDuration.unit: "d";
+        extension[3].valueDuration.system: "http://unitsofmeasure.org";
+        extension[3].valueDuration.code: "days";
+    }
 }

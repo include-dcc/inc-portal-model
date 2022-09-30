@@ -39,7 +39,7 @@ def ProcessSpecimen(study, specimen, all_aliquots) {
     type.coding[]: HarmonizeMapped(specimen.sample_type, "Sample Type");
     type.text: specimen.sample_type
 
-    collection._collectedDateTime.extension[0] (if specimen.age_at_biospecimen_collection?): AgeAtExtension(study, subject_id, specimen.age_at_biospecimen_collection, "days");
+    collection._collectedDateTime.extension[0] (if specimen.age_at_biospecimen_collection?): AgeAtExtension(study, subject_id, specimen.age_at_biospecimen_collection, "years_as_days");
     //container[]: ProcessAliquot(study, subject_id, aliquots[0].content[]);
 
     subject: Reference_Key_Identifier(study, "Patient", subject_id);

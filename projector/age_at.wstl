@@ -20,7 +20,7 @@ def AgeAt(study, subject, varname, table_name, required age_at) {
         code.text: HarmonizedLocalDisplay(varname, table_name);
         code.coding[]: HarmonizeMapped(varname, table_name);
         
-        _valueDateTime.extension[0]: AgeAtExtension(study, subject_id, age_at, "days");
+        _valueDateTime.extension[0]: AgeAtExtension(study, subject_id, age_at, "years_as_days");
         status: "final";
         resourceType: "Observation";
     }
