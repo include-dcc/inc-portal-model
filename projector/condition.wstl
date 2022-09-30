@@ -74,5 +74,8 @@ def ProcessCondition(study, condition) {
 }
 
 def ProcessDownSyndromeStatus(study, participant) {
-    out ds_condition: DownSyndrome(study, participant);
+    // DROPPING this 2022-09-22 because the DS code is already present in the 
+    // conditions and having this present as well is creating dupes
+    //
+    //out ds_condition: DownSyndrome(study, participant);
 }
