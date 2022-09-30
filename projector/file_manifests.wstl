@@ -11,9 +11,9 @@ def KfDocAttachment(study, manifest) {
 }
 
 def KfFileSizeExtension(study, manifest) {
-    if (manifest.size_bytes?) {
+    if (manifest.size?) {
         url: "https://nih-ncpi.github.io/ncpi-fhir-ig/StructureDefinition/file-size";
-        valueDecimal: $ParseFloat(manifest.size_bytes);
+        valueDecimal: $ParseFloat(manifest.size);
     }
 }
 
@@ -29,7 +29,7 @@ def KfFileHashExtension(study, hash, hash_type) {
 
 def FileDetailExtension(study, manifest) {
     extension[]: KfFileSizeExtension(study, manifest);
-    size: $ParseFloat(manifest.size);
+    size: $ParseInt(manifest.size);
     url: manifest.access_url;
     title: manifest.filename; 
 }
