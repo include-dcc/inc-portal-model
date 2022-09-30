@@ -419,6 +419,17 @@
           ]
         },
         {
+          "code": "Other",
+          "display": "Other",
+          "target": [
+            {
+              "code": "OTH",
+              "display": "other",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
           "code": "Prefer not to answer",
           "display": "Prefer not to answer",
           "target": [
@@ -436,23 +447,6 @@
             {
               "code": "UNK",
               "display": "Unknown",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "Race",
-      "target": "http://hl7.org/fhir/administrative-gender",
-      "element": [
-        {
-          "code": "Other",
-          "display": "Other",
-          "target": [
-            {
-              "code": "other",
-              "display": "Other",
               "equivalence": "equivalent"
             }
           ]
@@ -725,6 +719,17 @@
               "equivalence": "equivalent"
             }
           ]
+        },
+        {
+          "code": "Annotated Gene Fusion",
+          "display": "Annotated Gene Fusion",
+          "target": [
+            {
+              "code": "Annotated-Gene-Fusion",
+              "display": "Annotated Gene Fusion",
+              "equivalence": "equivalent"
+            }
+          ]
         }
       ]
     },
@@ -772,6 +777,17 @@
             {
               "code": "Raw Gene Fusion",
               "display": "Raw Gene Fusion",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Annotated Gene Fusion",
+          "display": "Annotated Gene Fusion",
+          "target": [
+            {
+              "code": "Annotated Gene Fusion",
+              "display": "Annotated Gene Fusion",
               "equivalence": "equivalent"
             }
           ]
@@ -834,6 +850,118 @@
             {
               "code": "C17610",
               "display": "Blood Sample",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "access_type",
+      "target": "https://includedcc.org/fhir/code-systems/data_access_types",
+      "element": [
+        {
+          "code": "Registered",
+          "display": "Registered",
+          "target": [
+            {
+              "code": "registered",
+              "display": "Registered",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "access_type",
+      "target": "self",
+      "element": [
+        {
+          "code": "Registered",
+          "display": "Registered",
+          "target": [
+            {
+              "code": "Registered",
+              "display": "Registered",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "IncludeProgram",
+      "target": "https://includedcc.org/fhir/code-systems/programs",
+      "element": [
+        {
+          "code": "ABC-DS",
+          "display": "ABC-DS",
+          "target": [
+            {
+              "code": "INCLUDE",
+              "display": "INCLUDE",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BRI-DSR",
+          "display": "BRI-DSR",
+          "target": [
+            {
+              "code": "INCLUDE",
+              "display": "INCLUDE",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DSC",
+          "display": "DSC",
+          "target": [
+            {
+              "code": "INCLUDE",
+              "display": "INCLUDE",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "IncludeProgram",
+      "target": "self",
+      "element": [
+        {
+          "code": "ABC-DS",
+          "display": "ABC-DS",
+          "target": [
+            {
+              "code": "ABC-DS",
+              "display": "ABC-DS",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BRI-DSR",
+          "display": "BRI-DSR",
+          "target": [
+            {
+              "code": "BRI-DSR",
+              "display": "BRI-DSR",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DSC",
+          "display": "DSC",
+          "target": [
+            {
+              "code": "DSC",
+              "display": "DSC",
               "equivalence": "equivalent"
             }
           ]
@@ -8537,6 +8665,17 @@
           ]
         },
         {
+          "code": "BRI-DSR",
+          "display": "BRI-DSR",
+          "target": [
+            {
+              "code": "BRI-DSR",
+              "display": "BRI-DSR",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
           "code": "DS-Brain",
           "display": "DS-Brain",
           "target": [
@@ -9805,11 +9944,11 @@
         },
         {
           "code": "Age At Biospecimen Collection",
-          "display": "Age in days of participant at time of biospecimen collection",
+          "display": "Age in years of participant at time of biospecimen collection",
           "target": [
             {
               "code": "Age At Biospecimen Collection",
-              "display": "Age in days of participant at time of biospecimen collection",
+              "display": "Age in years of participant at time of biospecimen collection",
               "equivalence": "equivalent"
             }
           ]
