@@ -49,7 +49,7 @@ def ProcessFamilyGroups(study, participants, familyid) {
         // For now, we don't actually have any relationships in the new data
         // So, only grouping folks as being members of the same family not
         // mother/son/etc.
-        //out family_members: ProcessFamilyRelationships(study, subjectids[], subjectids[*], "FAMMEMB");
+        out family_members: ProcessFamilyRelationships(study, subjectids[], subjectids[*], "FAMMEMB");
 
         // This is requested by portal team to help annotate the different family IDs
         // inside the portal
