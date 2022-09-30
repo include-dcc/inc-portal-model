@@ -2,7 +2,7 @@ study_id: BRI-DSR
 study_accession:  
 study_title: Benaroya Research Institute Down Syndrome Registry
 study_desc: TBD
-url: TBD
+url: https://includedcc.org/studies/benaroya-research-institute-bri
 identifier_prefix: https://includedcc.org/bri-dsr/fhir
 output_filename: khor
 id_colname: Participant ID

@@ -2,7 +2,7 @@ study_id: DSC
 study_accession:  
 study_title: DS-Connect-The Down Syndrome Registry
 study_desc: TBD
-url: TBD
+url: https://includedcc.org/studies/ds-connect
 identifier_prefix: https://includedcc.org/dsc/fhir
 output_filename: dsc
 id_colname: Participant ID

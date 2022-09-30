@@ -2,7 +2,7 @@ study_id: ABC-DS
 study_accession:  
 study_title: Alzheimer's Biomarker Consortium - Down Syndrome
 study_desc: TBD
-url: https://experts.unthsc.edu/en/projects/alzheimer-biomarker-consortium-down-syndrome-abc-ds-2
+url: https://includedcc.org/studies/alzheimer-s-biomarkers-consortium-down-syndrome-abc-ds
 identifier_prefix: https://includedcc.org/abc-ds/fhir
 output_filename: abc-ds
 id_colname: Participant ID
@@ -14,6 +14,9 @@ curies:
   http://purl.obolibrary.org/obo/mondo.owl: MONDO
   http://purl.obolibrary.org/obo/maxo.owl: MAXO
 projector_lib: projector
+remote_data_access_:
+  access_type: Access Registration
+  access_url: https://some-url.org
 env:
   local: dev
   dev: dev
