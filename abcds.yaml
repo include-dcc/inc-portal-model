@@ -2,7 +2,7 @@ study_id: ABC-DS
 study_accession:  
 study_title: Alzheimer's Biomarker Consortium - Down Syndrome
 study_desc: TBD
-url: https://includedcc.org/studies/alzheimer-s-biomarkers-consortium-down-syndrome-abc-ds
+url: https://includedcc.org/studies/alzheimer-biomarker-consortium-down-syndrome-abc-ds
 identifier_prefix: https://includedcc.org/abc-ds/fhir
 output_filename: abc-ds
 id_colname: Participant ID
